@@ -28,6 +28,7 @@ BuildRequires:	kf5-kconfig-devel >= %{version}
 BuildRequires:	kf5-kconfigwidgets-devel >= %{version}
 BuildRequires:	kf5-kcoreaddons-devel >= %{version}
 BuildRequires:	kf5-kdbusaddons-devel >= %{version}
+BuildRequires:	kf5-kdeclarative-devel >= %{version}
 BuildRequires:	kf5-kglobalaccel-devel >= %{version}
 BuildRequires:	kf5-kguiaddons-devel >= %{version}
 BuildRequires:	kf5-ki18n-devel >= %{version}
