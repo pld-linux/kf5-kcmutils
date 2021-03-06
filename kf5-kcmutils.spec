@@ -1,15 +1,15 @@
-%define		kdeframever	5.67
+%define		kdeframever	5.79
 %define		qtver		5.9.0
 %define		kfname		kcmutils
 
 Summary:	Utilities for KDE System Settings modules
 Name:		kf5-%{kfname}
-Version:	5.67.0
+Version:	5.79.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	3fd40a72390912440c06289b5a17faa8
+# Source0-md5:	15f2b2030e36ae4d2ab1fbe572c60b45
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel >= %{qtver}
@@ -96,6 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libKF5KCMUtils.so.*.*
 %{_datadir}/kservicetypes5/kcmodule.desktop
 %{_datadir}/kservicetypes5/kcmoduleinit.desktop
+%{_datadir}/qlogging-categories5/kcmutils.categories
 
 %files devel
 %defattr(644,root,root,755)
