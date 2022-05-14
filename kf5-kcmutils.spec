@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.93
+%define		kdeframever	5.94
 %define		qtver		5.9.0
 %define		kfname		kcmutils
 
 Summary:	Utilities for KDE System Settings modules
 Name:		kf5-%{kfname}
-Version:	5.93.0
+Version:	5.94.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	aa68052f68128069723c0ee7c07a9275
+# Source0-md5:	1db143e7ae245d53c83310532f22c42c
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel >= %{qtver}
@@ -103,9 +103,18 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.md
 %ghost %{_libdir}/libKF5KCMUtils.so.5
 %attr(755,root,root) %{_libdir}/libKF5KCMUtils.so.*.*
+%ghost %{_libdir}/libKF5KCMUtilsCore.so.5
+%attr(755,root,root) %{_libdir}/libKF5KCMUtilsCore.so.*.*
 %{_datadir}/kservicetypes5/kcmodule.desktop
 %{_datadir}/kservicetypes5/kcmoduleinit.desktop
 %{_datadir}/qlogging-categories5/kcmutils.categories
+%dir %{_libdir}/qt5/qml/org/kde/kcmutils
+%dir %{_libdir}/qt5/qml/org/kde/kcmutils/components
+%{_libdir}/qt5/qml/org/kde/kcmutils/components/KPluginDelegate.qml
+%{_libdir}/qt5/qml/org/kde/kcmutils/components/KPluginSelector.qml
+%{_libdir}/qt5/qml/org/kde/kcmutils/components/private/AboutPlugin.qml
+%attr(755,root,root) %{_libdir}/qt5/qml/org/kde/kcmutils/libkcmutilsqmlplugin.so
+%{_libdir}/qt5/qml/org/kde/kcmutils/qmldir
 
 %files devel
 %defattr(644,root,root,755)
@@ -113,3 +122,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/cmake/KF5KCMUtils
 %{_libdir}/libKF5KCMUtils.so
 %{qt5dir}/mkspecs/modules/qt_KCMUtils.pri
+%{_includedir}/KF5/KCMUtilsCore
+%{_libdir}/libKF5KCMUtilsCore.so
+
