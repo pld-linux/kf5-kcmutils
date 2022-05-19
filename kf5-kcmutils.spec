@@ -8,7 +8,7 @@
 Summary:	Utilities for KDE System Settings modules
 Name:		kf5-%{kfname}
 Version:	5.94.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -112,6 +112,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/qt5/qml/org/kde/kcmutils/components
 %{_libdir}/qt5/qml/org/kde/kcmutils/components/KPluginDelegate.qml
 %{_libdir}/qt5/qml/org/kde/kcmutils/components/KPluginSelector.qml
+%dir %{_libdir}/qt5/qml/org/kde/kcmutils/components/private
 %{_libdir}/qt5/qml/org/kde/kcmutils/components/private/AboutPlugin.qml
 %attr(755,root,root) %{_libdir}/qt5/qml/org/kde/kcmutils/libkcmutilsqmlplugin.so
 %{_libdir}/qt5/qml/org/kde/kcmutils/qmldir
