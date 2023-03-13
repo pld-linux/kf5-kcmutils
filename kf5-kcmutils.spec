@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.103
+%define		kdeframever	5.104
 %define		qtver		5.15.2
 %define		kfname		kcmutils
 
 Summary:	Utilities for KDE System Settings modules
 Name:		kf5-%{kfname}
-Version:	5.103.0
+Version:	5.104.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	da08e26fda501c382c1f2a5b40e6485d
+# Source0-md5:	be979023a9e5d1a312d6900973e85d15
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel >= %{qtver}
